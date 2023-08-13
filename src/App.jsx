@@ -73,10 +73,13 @@ export default function App(){
    )
    
     console.log(dice.value)
+    const styles = {
+        backgroundColor: tenzies ? "#67eb34" : "white"
+    }
     return(
-        <div className="centreItems">
-        <main>
-            <div className="diceContainer"> 
+        <div className="centreItems" >
+        <main >
+            <div className="diceContainer" style={styles}> 
                <div className="diceHolder">
                 {diceElements}
                </div>
