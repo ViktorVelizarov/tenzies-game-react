@@ -36,6 +36,7 @@ main{
     border-radius: 5px;
     border-color: gold;
     border-style: dashed;
+    cursor: pointer;
 }
 
 .diceHolder{
