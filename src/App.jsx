@@ -23,8 +23,12 @@ export default function App(){
         return arr
     }
     
-    function HoldDice(){
-        console.log("hold")
+    function HoldDice(id){
+       setDice(prev => prev.map(item => {
+        return item.id === id ?
+        {...item, isHeld: !item.isHeld} :
+        item
+       }))
     }
 
    const diceElements = dice.map(die => (
@@ -32,7 +36,7 @@ export default function App(){
       value={die.value} 
       isHeld={die.isHeld}
       id={die.id}
-      HoldDice = {HoldDice} />
+      HoldDice = {() => HoldDice(die.id)} />
    )
    )
    
